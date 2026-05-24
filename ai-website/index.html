@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rojith Jinenth | CSE Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">Rojith<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+                        <svg id="themeIcon" viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <p class="hero-pre">Hi, my name is</p>
+        <h1 class="hero-name">Rojith Jinenth.</h1>
+        <h2 class="hero-title">Computer Science Engineering Student</h2>
+        <p class="hero-desc">Focused on building actually useful software solutions. Aspiring Software Engineer with a focus on Mobile and Desktop Solutions! Specialized in C, Python, SQL, Front-end development, etc.</p>
+        <div>
+            <a href="#projects" class="cta-btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About & Core Skills</h2>
+        <div class="about-grid">
+            <div>
+                <p class="about-text">I am a Computer Science Engineering student focused on building efficient, data-driven applications. My primary expertise lies in Data Structures and Algorithms (DSA), where I enjoy breaking down complex problems into optimized computational logic.</p>
+                <p class="about-text">On the back-end, I write clean, structured code using C and Python, and I design reliable database frameworks using relational systems like MySQL and SQLite3. I pair this with responsive front-end development in HTML, CSS, and JavaScript to engineer complete, end-to-end software solutions.</p>
+            </div>
+            <div>
+                <div class="skill-group">
+                    <div class="skill-info"><span>Data Structures & Algorithms (DSA)</span><span>90%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-info"><span>C Programming & Python</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-info"><span>SQL (MySQL / SQLite3)</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-info"><span>Frontend (HTML, CSS, JS)</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Ecosystems</button>
+            <button class="filter-btn" data-filter="systems">Systems</button>
+            <button class="filter-btn" data-filter="apps">Applications</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-cat="systems">
+                <span class="project-tag">C Language</span>
+                <h3>Lab Competition Rock-Paper-Scissors Game</h3>
+                <p>An interactive, logic-driven tournament program built entirely in structured C. Engineered handling protocols to evaluate competitive game loops, terminal conditions, and team metrics efficiently.</p>
+            </div>
+            <div class="project-card" data-cat="apps">
+                <span class="project-tag">Python / Tkinter</span>
+                <h3>Car Inventory Management Program</h3>
+                <p>A desktop application engineered to resolve the manual overhead of tracking dealership fleets. Built with Tkinter for a responsive GUI, managing vehicle objects, operational data entries, and relational tracking specs.</p>
+            </div>
+            <div class="project-card" data-cat="apps">
+                <span class="project-tag">HTML5 / CSS3 / JS ES6</span>
+                <h3>Responsive Developer Portfolio</h3>
+                <p>A clean, custom-styled digital footprint tracking core competencies and code pipelines. Implements client-side dynamic content filtering, asynchronous viewport layout tracking, and a vector-shifting theme switch mechanism.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Connect With Me</h2>
+        <p class="socials-desc" style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px;">
+            Let's collaborate on building aesthetic and useful software, algorithmic solutions, and much more! Reach out across any of my active networks or view my GitHub Profile:
+        </p>
+        <div class="socials-container" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="https://github.com/rxjith/" target="_blank" rel="noopener noreferrer" class="social-card" style="text-decoration: none;">
+                <button class="social-btn" style="display: flex; align-items: center; gap: 0.75rem; background-color: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer;">
+                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    GitHub
+                </button>
+            </a>
+
+            <a href="https://linkedin.com/in/rojith-jinenth/" target="_blank" rel="noopener noreferrer" class="social-card" style="text-decoration: none;">
+                <button class="social-btn" style="display: flex; align-items: center; gap: 0.75rem; background-color: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer;">
+                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn
+                </button>
+            </a>
+
+            <a href="https://instagram.com/rxjith/" target="_blank" rel="noopener noreferrer" class="social-card" style="text-decoration: none;">
+                <button class="social-btn" style="display: flex; align-items: center; gap: 0.75rem; background-color: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer;">
+                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    Instagram
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+:root {
+    /* Retro Amber Terminal Dark Mode (Soft Cocoa & Warm Yellow) */
+    --bg-primary: #1d2021;       /* Dark Cocoa (Softer than black for low eye-strain) */
+    --bg-secondary: #282828;     /* Warm Charcoal Card */
+    --text-primary: #fbf1c7;     /* Soft Cream / Bleached Page */
+    --text-secondary: #bdae93;   /* Muted Sand Gray */
+    --accent: #fabd2f;           /* Warm Amber Yellow */
+    --accent-hover: #fe8019;     /* Retro Vintage Orange */
+    --border: #3c3836;           /* Soft Earthy Border */
+}
+
+[data-theme="light"] {
+    /* Vintage Book Page Light Mode (Warm Sepia Paper) */
+    --bg-primary: #f9f5d7;       /* Aged Book Paper / Sepia Tint (No blinding whites) */
+    --bg-secondary: #fbf1c7;     /* Soft Cream Card */
+    --text-primary: #282828;     /* Soft Charcoal Text (Much easier to read than pure black) */
+    --text-secondary: #7c6f64;   /* Muted Mud Gray */
+    --accent: #b57614;           /* Dark Brass Yellow */
+    --accent-hover: #af3a03;     /* Terracotta Red-Orange */
+    --border: #d5c4a1;           /* Vintage Paper Border */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation - High-Contrast Amber Inversion */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--accent); /* Solid high-vibrancy amber theme fill */
+    border-bottom: 1px solid var(--accent-hover);
+    z-index: 1000;
+}
+
+/* Base Navigation Link and Element Rules for High Contrast */
+nav .logo {
+    color: #1d2021 !important; /* Dark contrast over yellow background */
+    text-decoration: none;     /* Removes default line decorations from logo link */
+}
+nav .logo span {
+    color: #fe8019 !important; /* Contrasted accent dot */
+}
+
+nav .nav-links a {
+    color: #3c3836 !important; /* Deep contrast links */
+    font-weight: 600;
+    text-decoration: none;     /* Strips out the default underline under text links */
+}
+
+nav .nav-links a:hover, nav .nav-links a.active {
+    color: #000000 !important; /* Hard black focus target */
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+}
+
+nav .theme-btn {
+    border: none !important;    /* Completely removes the rectangle border shape */
+    color: #3c3836 !important;
+}
+
+nav .theme-btn:hover {
+    color: #000000 !important;   /* Hard black focus target on hover */
+}
+
+/* Light Mode Overrides for Navigation Balance */
+[data-theme="light"] nav {
+    background-color: var(--accent); /* Uses light mode's deep brass yellow */
+    border-bottom: 1px solid var(--accent-hover);
+}
+
+[data-theme="light"] nav .nav-links a {
+    color: #f9f5d7 !important; /* Crisp light cream links over dark brass yellow */
+}
+
+[data-theme="light"] nav .nav-links a:hover, [data-theme="light"] nav .nav-links a.active {
+    color: #ffffff !important; /* White focus link */
+}
+
+[data-theme="light"] nav .logo {
+    color: #f9f5d7 !important;
+}
+
+[data-theme="light"] nav .logo span {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] nav .theme-btn {
+    border: none !important;    /* Ensures no border in light mode as well */
+    color: #f9f5d7 !important;
+}
+
+[data-theme="light"] nav .theme-btn:hover {
+    color: #ffffff !important;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+/* Shared Section Settings */
+section {
+    padding: 6rem 2rem 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+/* Hero Content */
+#home { text-align: left; }
+.hero-pre { color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
+.hero-name { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+.hero-title { font-size: 2rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+.hero-desc { max-width: 600px; color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.1rem; }
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #1d2021; /* Matches dark base color for crisp contrast */
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+[data-theme="light"] .cta-btn {
+    color: #f9f5d7; /* Shifts readable text contrast over light theme accents */
+}
+
+.cta-btn:hover { background-color: var(--accent-hover); }
+
+/* About Panel */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.about-text {
+    margin-bottom: 1rem; 
+    color: var(--text-secondary);
+}
+
+.skill-group { margin-bottom: 1.5rem; }
+.skill-info { display: flex; justify-content: space-between; margin-bottom: 0.3rem; }
+.skill-bar { height: 8px; background-color: var(--bg-secondary); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.skill-progress { height: 100%; background-color: var(--accent); width: 0; transition: width 1s ease-out; }
+
+/* Filter System and Projects */
+.filter-container { display: flex; gap: 1rem; margin-bottom: 2rem; }
+.filter-btn {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover { border-color: var(--accent); }
+
+.project-tag {
+    font-size: 0.75rem;
+    background-color: rgba(250, 189, 47, 0.12); /* Tweaked opacity so yellow sits beautifully */
+    color: var(--accent);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 { margin-bottom: 0.5rem; }
+.project-card p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1; }
+
+/* Theme Button - Clean Unified Settings */
+.theme-btn {
+    background: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.theme-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Responsiveness Adjustments */
+@media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-name { font-size: 2.5rem; }
+    .nav-links { gap: 1rem; }
+}
+
+.social-btn {
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+.social-btn:hover {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
